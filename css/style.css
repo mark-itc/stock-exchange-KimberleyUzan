@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@467&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+  }
+  
+  .background {
+    background-color: rgba(5, 98, 218, 0.46);
+    background-repeat: no-repeat;
+    position: fixed;
+    inset: 0; 
+    z-index: -1;
+  }
+
+  .titleIndex {
+    font-size: revert;
+    margin-top: 2rem;
+    text-align: center;
+    color: rgb(42, 41, 39);
+  }
+  
+  .result-item-container {
+    list-style-type: none;
+    border: 1px solid #ddd;
+    margin-top: -1px;
+    background-color: #f6f6f6;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* .no-item .search-result-text {
+    font-size: larger;
+    /* font-size: 70%; Rien changer */
+  /* } */ 
+  
+  .main-container {
+    margin-inline: 10%;
+  }
+  
+  .result-item-container {
+    background: #eff4f3;
+    border: outset 2px;
+  }
+
+  .form-container {
+    display: flex;
+    justify-content: center;
+    /* width: 100%; */
+    padding-top: 25px;
+  }
+  
+  .search-button {
+    min-width: 150px;
+    margin-bottom: 12px;
+    border: outset 2px;
+    /* -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out; */
+  }
+
+  .search-button:hover {
+    box-shadow: 0 0 40px 40px rgba(5, 98, 218, 0.46) inset;
+  }
+
+  .input-field {
+    width: 70%; 
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1.5px outset white;
+    margin-bottom: 12px;
+  }
+  
+  .company-img {
+    max-height: 100px;
+    /* padding: auto; */
+    /* float: center; */
+  }
+  
+  .company-description {
+    text-align: justify;
+    margin-block: 1rem;
+    /* margin-inline: 1.5rem; */
+    margin-inline: 2rem;
+  }
+
+  .company-description::first-letter {
+    font-weight: bold;
+    font-size: 22px;
+  }
+
+  /* .result-item {
+    list-style-type: none;
+  } */
+  
+  .results-list {
+    display: flex;
+    /* width: 100%; */
+    width: 93%;
+    padding-top: 3%;
+    padding-left: 3.3%;
+    flex-direction: column;
+  }
+  
+  .global-container {
+    max-width: 100vh;
+    min-height: 70vh;
+    width: 70%; 
+    margin: auto;
+    border: 3px outset;
+    /* border-radius: 1%; */
+    padding: 15px;
+    margin-top: 50px;
+    /* background-color: rgba(253, 254, 254, 0.907); */
+    background-color: white;  
+  }
+  
+  .info-container {
+    display: flex;
+    /* align-items: flex-end; */
+    margin-left: 2%;
+    flex-direction: column;
+  }
+  
+  .title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .title-container * {
+    font-size: revert;
+  }
+  
+  .searched-found {
+    background-color: #fafa65; /* ----Surligneur---- */
+  }
+  
+  .search-result-img {
+    display: flex;
+    align-items: center;
+    height: 40px;
+  }
+  
+  .positive {
+    color: rgb(75, 158, 93);
+  }
+  
+  .negative {
+    color: rgb(214, 87, 69);
+  }
+  
+  .symbol-marquee {
+    padding-left: 10px;
+  }
+  
+  .marquee {
+    width: 100%;
+    line-height: 50px;
+    /* background-color: transparent; */
+    color: white;
+    white-space: nowrap;
+    /* overflow: hidden; */
+    box-sizing: border-box;
+  }
+  
+  .contentMarq {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 30s linear infinite;
+    background: rgba(225, 227, 219, 0.359);
+    
+  }
+  
+  .contentMarq * {
+    display: inline;
+  }
+  
+  .contentMarq:hover {
+    animation-play-state: paused;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-100%, 0);
+    }
+  }
+  
+  .hidden {
+    display: none !important;
+  }
+
+  /* --------- CSS FOR SPINNER --------- */
+  .page-load.cssload-jumping {
+    /* position: relative; */
+    display: block;
+    /* position: absolute; */
+    position: fixed;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin: auto;
+    margin-top: 9rem;
+    /* left: 0;
+    right: 0; */
+    inset: 0;
+  
+    /* width: 10em; */
+    width: 50px;
+    text-align: center;
+  }
+  
+  .cssload-jumping,
+  .cssload-jumping * {
+    box-sizing: border-box;
+  }
+  
+  .cssload-jumping span {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    background: rgb(249, 251, 251);
+    background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+  }
+  
+  .cssload-jumping span:nth-child(1) {
+    animation: scale 1.15s 0.12s infinite cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    -webkit-animation: scale 1.15s 0.12s infinite
+      cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  }
+
+  .cssload-jumping span:nth-child(2) {
+    animation: scale 1.15s 0.23s infinite cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    -webkit-animation: scale 1.15s 0.23s infinite
+      cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  }
+
+  .cssload-jumping span:nth-child(3) {
+    animation: scale 1.15s 0.35s infinite cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    -webkit-animation: scale 1.15s 0.35s infinite
+      cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  }
+
+  .cssload-jumping span:nth-child(4) {
+    animation: scale 1.15s 0.46s infinite cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    -webkit-animation: scale 1.15s 0.46s infinite
+      cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  }
+
+  .cssload-jumping span:nth-child(5) {
+    animation: scale 1.15s 0.58s infinite cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    -webkit-animation: scale 1.15s 0.58s infinite
+      cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  }
+  
+  @keyframes scale {
+    0% {
+      transform: scale(0);
+    }
+    25% {
+      transform: scale(0.9, 0.9);
+      background: rgb(179, 211, 207);
+    }
+    50% {
+      transform: scale(1, 1);
+      margin: 0 3px;
+      background: rgba(5, 98, 218, 0.46);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+
+  @-webkit-keyframes scale {
+    0% {
+        transform: scale(0);
+      }
+      25% {
+        transform: scale(0.9, 0.9);
+        background: rgb(179, 211, 207);
+      }
+      50% {
+        transform: scale(1, 1);
+        margin: 0 3px;
+        background: rgba(5, 98, 218, 0.46);
+      }
+      100% {
+        transform: scale(0);
+      }
+  }
